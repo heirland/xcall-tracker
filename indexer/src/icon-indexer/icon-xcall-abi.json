@@ -1,0 +1,323 @@
+[
+  {
+    "inputs": [],
+    "name": "getBtpAddress",
+    "outputs": [
+      {
+        "type": "str"
+      }
+    ],
+    "readonly": "0x1",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_to",
+        "type": "str"
+      },
+      {
+        "name": "_data",
+        "type": "bytes"
+      },
+      {
+        "default": null,
+        "name": "_rollback",
+        "type": "bytes"
+      }
+    ],
+    "name": "sendCallMessage",
+    "outputs": [
+      {
+        "type": "int"
+      }
+    ],
+    "payable": "0x1",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_reqId",
+        "type": "int"
+      },
+      {
+        "name": "_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "executeCall",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_sn",
+        "type": "int"
+      }
+    ],
+    "name": "executeRollback",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": "0x1",
+        "name": "_from",
+        "type": "str"
+      },
+      {
+        "indexed": "0x1",
+        "name": "_to",
+        "type": "str"
+      },
+      {
+        "indexed": "0x1",
+        "name": "_sn",
+        "type": "int"
+      },
+      {
+        "name": "_reqId",
+        "type": "int"
+      },
+      {
+        "name": "_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "CallMessage",
+    "type": "eventlog"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": "0x1",
+        "name": "_reqId",
+        "type": "int"
+      },
+      {
+        "name": "_code",
+        "type": "int"
+      },
+      {
+        "name": "_msg",
+        "type": "str"
+      }
+    ],
+    "name": "CallExecuted",
+    "type": "eventlog"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": "0x1",
+        "name": "_sn",
+        "type": "int"
+      },
+      {
+        "name": "_code",
+        "type": "int"
+      },
+      {
+        "name": "_msg",
+        "type": "str"
+      }
+    ],
+    "name": "ResponseMessage",
+    "type": "eventlog"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": "0x1",
+        "name": "_sn",
+        "type": "int"
+      }
+    ],
+    "name": "RollbackMessage",
+    "type": "eventlog"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": "0x1",
+        "name": "_sn",
+        "type": "int"
+      },
+      {
+        "name": "_code",
+        "type": "int"
+      },
+      {
+        "name": "_msg",
+        "type": "str"
+      }
+    ],
+    "name": "RollbackExecuted",
+    "type": "eventlog"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": "0x1",
+        "name": "_from",
+        "type": "Address"
+      },
+      {
+        "indexed": "0x1",
+        "name": "_to",
+        "type": "str"
+      },
+      {
+        "indexed": "0x1",
+        "name": "_sn",
+        "type": "int"
+      },
+      {
+        "name": "_nsn",
+        "type": "int"
+      }
+    ],
+    "name": "CallMessageSent",
+    "type": "eventlog"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_from",
+        "type": "str"
+      },
+      {
+        "name": "_svc",
+        "type": "str"
+      },
+      {
+        "name": "_sn",
+        "type": "int"
+      },
+      {
+        "name": "_msg",
+        "type": "bytes"
+      }
+    ],
+    "name": "handleBTPMessage",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_src",
+        "type": "str"
+      },
+      {
+        "name": "_svc",
+        "type": "str"
+      },
+      {
+        "name": "_sn",
+        "type": "int"
+      },
+      {
+        "name": "_code",
+        "type": "int"
+      },
+      {
+        "name": "_msg",
+        "type": "str"
+      }
+    ],
+    "name": "handleBTPError",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+      {
+        "type": "Address"
+      }
+    ],
+    "readonly": "0x1",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_address",
+        "type": "Address"
+      }
+    ],
+    "name": "setAdmin",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "default": null,
+        "name": "_addr",
+        "type": "Address"
+      }
+    ],
+    "name": "setProtocolFeeHandler",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getProtocolFeeHandler",
+    "outputs": [
+      {
+        "type": "Address"
+      }
+    ],
+    "readonly": "0x1",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_value",
+        "type": "int"
+      }
+    ],
+    "name": "setProtocolFee",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getProtocolFee",
+    "outputs": [
+      {
+        "type": "int"
+      }
+    ],
+    "readonly": "0x1",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_net",
+        "type": "str"
+      },
+      {
+        "name": "_rollback",
+        "type": "bool"
+      }
+    ],
+    "name": "getFee",
+    "outputs": [
+      {
+        "type": "int"
+      }
+    ],
+    "readonly": "0x1",
+    "type": "function"
+  }
+]
